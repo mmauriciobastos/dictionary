@@ -19,7 +19,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word.trim())}`
+        `/api/dictionary?word=${encodeURIComponent(word.trim())}`
       );
 
       if (!response.ok) {
